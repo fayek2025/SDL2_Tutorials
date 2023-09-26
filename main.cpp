@@ -18,8 +18,9 @@ int main()
     }
     
     //Creating new windows
-    window = SDL_CreateWindow(0 , 0 , 700 , 300 , )
+    window = SDL_CreateWindow(0 , 0 , 700 , 300 , SHOW_OUTPUT)
     {
+        
         
     }
 }
