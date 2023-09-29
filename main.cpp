@@ -18,9 +18,37 @@ int main()
     }
     
     //Creating new windows
-    window = SDL_CreateWindow(0 , 0 , 700 , 300 , SHOW_OUTPUT)
-    {
+    window = SDL_CreateWindow("my first game",0 , 0 , 700 , 300 ,
+     SDL_WINDOW_SHOWN);
+
+     bool gameIsRunning = true;
+
+     //Initiating infinite loop
+     while(gameIsRunning)
+     {
+        SDL_Event event;
+        //starting our event loop
+        while (SDL_PollEvent(&event))
+        
+        {
+            //handle each specific event
+            if(event.type == SDL_QUIT)
+            {
+                gameIsRunning = false;
+            }
+        }
+        
+     }
+    
+
+    SDL_Delay(3000);
+
+    SDL_DestroyWindow(window);
+
+    SDL_QUIT;
+
+
         
         
-    }
+    
 }
